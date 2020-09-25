@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/css/styles.css">
+    
+    <title>Weather</title>
+</head>
+<body>
+     <div class="main-content">
+         {{!-- include header partial --}}
+        {{>header}}
+
+        <form>
+            <label for="address">
+                <p>Enter location name to search weather!</p>
+                <input type="text" placeholder="Enter address!">
+            </label>
+            <button>Search</button>
+        </form>
+        <div class="display-content">
+            <img>
+            <p class="weather-content"></p>
+            <small class="location"></small>
+        </div>
+    </div>
+
+ {{!-- include footer partial  --}}
+    {{>footer}}
+     <script defer src="/js/app.js"></script>
+</body>
+</html>
+
