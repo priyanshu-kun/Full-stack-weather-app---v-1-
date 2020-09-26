@@ -11,17 +11,14 @@ weatherContent.innerHTML = `<p>Your weather details will show here!</p>`
 
 const showWeather = (location) => {
 
-    fetch(`http://localhost:3000/weather?address=${location}`)
+    fetch(`/weather?address=${location}`)
     .then(res => res.json())
     .then(data => {
        if(data.error) {
-        weatherContent.innerHTML = ""
         weatherContent.innerHTML = "Unable to find location!"
        }
        else {
         console.log(data)
-        // let img = document.createElement("img");
-        weatherContent.innerHTML = ""
         img.setAttribute("src",`${data.weather_icons}`);
         weatherContent.innerHTML = "hello world"
         weatherContent.innerHTML = `The temprature is ${data.temperature} and ${data.weather_descriptions}`;
