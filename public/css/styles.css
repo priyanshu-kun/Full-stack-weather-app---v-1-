@@ -82,3 +82,10 @@ button:hover {
 .display-content img {
     border-radius: 10px;
 }
+
+.description {
+    font-size: 1.2rem;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    line-height: 2rem;
+}
